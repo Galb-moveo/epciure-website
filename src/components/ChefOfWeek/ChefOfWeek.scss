@@ -1,0 +1,95 @@
+.chef {
+  margin: 0 126px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chef__title {
+  font-size: var(--card-title-S-size);
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: --card-S-letter;
+  text-transform: uppercase;
+  font-weight: var(--card-f-S-weight);
+}
+
+.chef__intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 63px;
+}
+
+.chef__image {
+  position: relative;
+  width: 478px;
+  height: 372px;
+}
+// .chef__image:hover + .hide{
+//   visibility: visible;
+// }
+
+.hide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: visible;
+  position: absolute;
+  font-weight: 400;
+  font-size: var(--card-title-B-size);
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: var(--card-B-letter);
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.8);
+  bottom: 0;
+  height: 78px;
+  left: 0;
+  right: 0;
+}
+
+.chef__description {
+  font-weight: var(--card-f-S-weight);
+  font-size: 24px;
+  line-height: 35px;
+  text-align: justify;
+  letter-spacing: var(--card-S-letter);
+  text-overflow: ellipsis;
+  max-width: 642px;
+}
+
+.chef__res {
+  font-weight: var(--card-f-S-weight);
+  font-size: var(--card-title-S-size);
+  line-height: 35px;
+  letter-spacing: var(--card-S-letter);
+  text-transform: capitalize;
+  margin: 40px 0 45px;
+}
+
+.chef__res-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 0px;
+  list-style: none;
+}
+
+.chef__res-item {
+  width: 231px;
+  height: 357px;
+  background-color: var(--card-b-color);
+  text-align: center;
+}
+
+.chef__res-name {
+  font-weight: 400;
+  font-size: var(--card-title-S-size);
+  line-height: 47px;
+  letter-spacing: var(--card-B-letter);
+  margin: 20px 0;
+}
+.chef__res-image {
+  width: 231px;
+  height: 224px;
+}

@@ -1,0 +1,39 @@
+.restaurant {
+  margin: 0 126px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant__title {
+  font-style: normal;
+  font-weight: var(--card-f-S-weight);
+  font-size: var(--card-title-S-size);
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: var(--card-S-letter);
+  text-transform: uppercase;
+  margin: 80px 0px 40px;
+}
+
+.restaurant__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 0px;
+}
+
+.restaurant__button {
+  border: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: right;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding: 0px;
+  cursor: pointer;
+  margin-top: 41px;
+}

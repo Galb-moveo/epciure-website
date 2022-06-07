@@ -1,0 +1,90 @@
+
+%header-button {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.header {
+  height: 64px;
+  position: relative;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 130px;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 162px;
+  height: 33px;
+  margin-right: 32px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header__nav-item {
+  text-decoration: none;
+  font-weight: var(--card-f-S-weight);
+  font-size: 18px;
+  line-height: 22px;
+  color: black;
+  letter-spacing: 1.92px;
+}
+
+.header__icons_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__icons {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0px;
+  gap: 25px;
+}
+
+.header__button_cart {
+  @extend %header-button;
+  background-image: url('../../assets/images/cart.svg');
+}
+
+.header__button_personal {
+  @extend %header-button;
+  background-image: url('../../assets/images/personal.svg');
+}
+.header__button_search {
+  @extend %header-button;
+  background-image: url('../../assets/images/search.svg');
+}
+
+.cart__button {
+  position: absolute;
+  bottom: 44px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: var(--card-B-letter);
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 5px 15px;
+  background-color: transparent;
+  cursor: pointer;
+}

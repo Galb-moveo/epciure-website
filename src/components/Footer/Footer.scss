@@ -1,0 +1,22 @@
+.footer {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 40px;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-weight: var(--card-f-S-weight);
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1.92px;
+  color: #000000;
+}
