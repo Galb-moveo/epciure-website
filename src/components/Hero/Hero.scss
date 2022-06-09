@@ -1,14 +1,14 @@
 .hero {
   background-image: url('../../assets/images/hero-picture.png');
   max-width: 100%;
-  height: 696px;
+  min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  object-fit: cover;
 }
 
 .hero__search {
-  position: absolute;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -17,52 +17,93 @@
   right: 0;
   bottom: 0;
   top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-top: auto;
-  width: 776px;
-  height: 221px;
+  margin: 65px 30px;
   background-color: rgba(255, 255, 255, 0.88);
 }
 
 .hero__title {
   font-weight: var(--card-f-S-weight);
   font-style: normal;
-  font-size: 32px;
-  line-height: 40px;
-  width: 410px;
+  font-size: 24px;
+  line-height: 32px;
+  margin: auto 10px;
   letter-spacing: 1.97px;
+  text-align: center;
+  max-width: 335px;
 }
 
 .hero__search_wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   border: 1px solid black;
   padding: 6px 12px;
-  width: 505px;
+  margin: auto;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
 }
 
 .hero__input {
-  width: 423px;
+  margin: auto;
   background-color: transparent;
-  border: none;
-  padding-left: 26px;
   letter-spacing: 1.29px;
   font-weight: var(--card-f-S-weight);
-  font-size: 24px;
-  line-height: 29px;
+  line-height: 15px;
+  border: 0;
+  border-radius: 4px;
+  flex: 1 0 80%;
+  padding-left: 2%;
+  text-align: center;
   outline: none;
+  text-align: start;
 }
 
-.hero__button{
-    background-image: url('../../assets/images/input-search.svg');
+.hero__button {
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/input-search.svg');
+  border: none;
+  background-size: 100%;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 696px;
+  }
+
+  .hero__search {
+    margin: auto auto;
+    width: 776px;
+    height: 221px;
+  }
+
+  .hero__title {
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 410px;
+  }
+
+  .hero__search_wrapper {
+    width: 505px;
+    margin-bottom: 35px;
+  }
+
+  .hero__input {
+    width: 423px;
     border: none;
-    background-size: 100%;
+    padding-left: 26px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .hero__button {
     height: 32px;
     width: 32px;
-    background-color: transparent;
-    cursor: pointer;
+  }
 }

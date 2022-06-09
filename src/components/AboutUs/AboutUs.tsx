@@ -6,18 +6,21 @@ const AboutUs = () => {
   return (
     <div className='about'>
       <div className='about__container'>
-        <div>
-          <h3 className='about__title'>About Us</h3>
-          <div className='about__description'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
-            vel justo fermentum bibendum non eu ipsum. Cras porta malesuada
-            eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna
-            sodales porta. Vivamus elit urna, dignissim a vestibulum.
-            <p>
+        <div className='about__wrapper'>
+          <div>
+            <h3 className='about__title'>About Us</h3>
+            <div className='about__description'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a
-              lacus vel justo fermentum bibendum no eu ipsum. Cras porta
-              malesuada eros.
-            </p>
+              lacus vel justo fermentum bibendum non eu ipsum. Cras porta
+              malesuada eros, eget blandit turpis suscipit at. Vestibulum sed
+              massa in magna sodales porta. Vivamus elit urna, dignissim a
+              vestibulum.
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a
+                lacus vel justo fermentum bibendum no eu ipsum. Cras porta
+                malesuada eros.
+              </p>
+            </div>
           </div>
 
           <div className='about__links'>
@@ -29,6 +32,7 @@ const AboutUs = () => {
             </button>
           </div>
         </div>
+        
         <div>
           <img className='about__logo' src={logo} alt='logo-about' />
         </div>

@@ -1,0 +1,37 @@
+.modal__search {
+  height: 367px;
+  top: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.modal__search_input {
+  margin: 0 32px;
+  display: block;
+  border: 0.5px solid #000000;
+  border-radius: 4px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  height: 30px;
+  max-width: 315px;
+}
+
+.modal__search__title {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1.92px;
+}
+
+.modal__search_button {
+  position: absolute;
+  top: 15px;
+  left: 24px;
+  background-color: transparent;
+  border: none;
+}
+@media screen and (min-width: 1024px) {
+  .modal__search {
+    display: none;
+  }
+}

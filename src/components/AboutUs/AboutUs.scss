@@ -1,43 +1,100 @@
 .about {
   background-color: #fafafa;
-  height: 529px;
-  max-width: 40px 0;
+  // height: 529px;
+  // max-width: 40px 0;
 }
-
 .about__container {
-  margin: 40px 126px;
+  margin: 48px 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 
-.about__title {
-  font-weight: var(--card-f-S-weight);
-  font-size: var(--card-title-S-size);
-  line-height: 35px;
-  letter-spacing: 2.14px;
-  text-transform: uppercase;
+.about__logo {
+  height: 102px;
+  width: 95px;
+  margin: 32px 0 24px;
 }
-
-.about__description {
-  font-style: normal;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: 2.14px;
-  width: 569px;
-  height: 300px;
-  text-overflow: ellipsis;
-  margin: 16px 0px;
+.about__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
 }
-
-.about__log {
-  height: 166px;
-  width: 178px;
-}
-
 .about__link {
   border: none;
   background-color: transparent;
+  padding-left: 5px;
+  
+}
+.about__title {
+  font-weight: var(--card-f-S-weight);
+  font-size: var(--card-title-S-size=18px);
+  line-height: 35px;
+  letter-spacing: var(--card-S-letter);
+  text-transform: uppercase;
+}
+.about__description {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 2.14px;
+  text-overflow: ellipsis;
+  margin: 16px 0px 40px;
+}
+@media screen and (min-width: 580px) {
+  .about__container {
+    margin: 40px 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    background-color: #fafafa;
+    height: 529px;
+  }
+  .about__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__container {
+    margin: 40px 126px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .about__links{
+    flex-direction: row;
+  }
+
+  .about__title {
+    font-weight: var(--card-f-S-weight);
+    font-size: var(--card-title-S-size);
+    line-height: 35px;
+    letter-spacing: 2.14px;
+    text-transform: uppercase;
+  }
+
+  .about__description {
+    font-style: normal;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2.14px;
+    width: 569px;
+    height: 300px;
+    text-overflow: ellipsis;
+    margin: 16px 0px;
+  }
+
+  .about__logo {
+    height: 166px;
+    width: 178px;
+  }
+
+  .about__link {
+    border: none;
+    background-color: transparent;
+  }
 }

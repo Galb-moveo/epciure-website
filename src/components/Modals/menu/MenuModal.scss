@@ -1,0 +1,33 @@
+.modal__menu {
+  height: 405px;
+  top: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header__nav_modal {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 80px 20px 0px;
+}
+
+.header__nav-item_modal {
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 24px;
+  letter-spacing: 1.92px;
+  text-decoration: none;
+  color: #000000;
+}
+.footer__nav_modal {
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .modal__menu {
+    display: none;
+  }
+}

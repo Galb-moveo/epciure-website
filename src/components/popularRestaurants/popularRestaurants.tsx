@@ -11,8 +11,9 @@ const PopularRestaurants = (props: any) => {
   for (let i = 0; i < 5 - props.item.stars; i++) {
     emptyStarsArray.push(<img src={emptyStar} alt=''></img>);
   }
+
   return (
-    <li className='restaurant__item'>
+    <li className='restaurant__item' key={props.key}>
       <img className='restaurant__image' src={props.item.image} alt='img' />
       <div className='restaurant__wrapper'>
         <h3 className='restaurant__name'>{props.item.name}</h3>
@@ -21,7 +22,6 @@ const PopularRestaurants = (props: any) => {
           {filledStarsArray.map((fullStar) => fullStar)}
           {emptyStarsArray.map((emptyStar) => emptyStar)}
         </div>
-        <div className='test2'></div>
       </div>
     </li>
   );

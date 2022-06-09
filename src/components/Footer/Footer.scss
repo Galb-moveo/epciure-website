@@ -1,22 +1,38 @@
 .footer {
-  height: 84px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
-
 .footer__nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   list-style: none;
   gap: 40px;
+  margin: 24px 20px;
 }
 
 .footer__link {
   text-decoration: none;
-  font-weight: var(--card-f-S-weight);
+  font-weight: 200;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 1.92px;
   color: #000000;
+}
+
+@media screen and (min-width: 580px) {
+  .footer__nav {
+    margin: 24px 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    height: 84px;
+    justify-content: center;
+  }
+
+  .footer__nav {
+    flex-direction: row;
+  }
 }

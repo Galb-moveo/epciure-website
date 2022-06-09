@@ -3,31 +3,55 @@
   flex-direction: column;
   background-color: #fafafa;
   align-items: center;
-  height: 265px;
-  margin: 80px 0;
+  margin: 48px 0 ;
 }
 
 .icons__title {
+  display: none;
+}
+.icons__title_mobile {
   font-weight: var(--card-f-S-weight);
-  font-size: var(--card-title-S-size);
+  font-size: var(--card-title-S-size=18px);
   line-height: 35px;
   text-align: center;
-  letter-spacing: 2.14px;
+  letter-spacing: var(--card-S-letter);
   text-transform: uppercase;
 }
 
 .icons__wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
-  gap: 40px;
+  gap: 57px;
   list-style: none;
 }
 
 .icons__name {
   font-weight: var(--card-f-S-weight);
-  font-size: 24px;
+  font-size: 18px;
   line-height: 30px;
   text-align: center;
   letter-spacing: 1.97px;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .icons {
+    height: 265px;
+  }
+
+  .icons__title {
+    font-size: var(--card-title-S-size);
+    letter-spacing: 2.14px;
+  }
+
+  .icons__wrapper {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .icons__name {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
