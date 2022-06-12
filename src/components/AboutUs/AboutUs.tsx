@@ -33,7 +33,7 @@ const AboutUs = () => {
           </div>
         </div>
         
-        <div>
+        <div data-aos="flip-right">
           <img className='about__logo' src={logo} alt='logo-about' />
         </div>
       </div>

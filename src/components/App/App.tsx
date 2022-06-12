@@ -27,14 +27,12 @@ function App() {
     setIsMenuOpen(false);
   }
 
-  useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 400,
-      easing: 'ease-in-sine',
-      delay: 80,
-    });
-  }, []);
+  AOS.init({
+    offset: 200,
+    duration: 400,
+    easing: 'ease-in-sine',
+    delay: 80,
+  });
 
   return (
     <div className='app'>
