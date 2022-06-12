@@ -8,12 +8,12 @@ import { dishes } from '../../mocks-data/mock-dishes';
 
 const DishesList = () => {
   return (
-    <div className='restaurant'>
-      <div className='restaurant__container' data-aos='zoom-out'>
+    <section className='restaurant'>
+      <div className='restaurant__container'>
       <h2 className='restaurant__title'>SIGNATURE DISH OF:</h2>
       <Slider {...sliderSettings}>
         {dishes.map((dish) => (
-          <Dish dish={dish} key={dish.name} />
+          <Dish dish={dish} key={dish.id} />
         ))}
       </Slider>
       <div className='restaurant__button_wrap'>
@@ -22,9 +22,8 @@ const DishesList = () => {
           <img className='restaurant__button_arrow' src={arrow} alt='arrow' />
         </button>
       </div>
-      
       </div>
-    </div>
+    </section>
   );
 };
 

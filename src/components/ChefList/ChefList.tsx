@@ -2,11 +2,13 @@ import { chefs } from '../../mocks-data/mock-chefs';
 import ChefOfWeek from '../ChefOfWeek/ChefOfWeek';
 const ChefList = () => {
   return (
-    <ul style={{ padding: '0'}}>
+    <section className='chefOfWeek'>
+    <ul className='chef__list_ul'>
       {chefs.map((chef) => (
         <ChefOfWeek chef={chef} key={chef.title} />
       ))}
     </ul>
+    </section>
   );
 };
 

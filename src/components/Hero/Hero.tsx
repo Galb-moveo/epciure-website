@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className='hero '>
+    <section className='hero '>
       <div className='hero__search'>
         <h3 className='hero__title'>
           Epicure works with the top chef restaurants in Tel Aviv
@@ -15,7 +15,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

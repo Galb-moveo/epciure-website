@@ -4,8 +4,8 @@ import spicy from '../../assets/images/spicy.svg'
 
 const Icons = () => {
   return (
-    <div className='icons'>
-        <h3 className='icons__title_mobile'>Signature Dish Of:</h3>
+    <section className='icons'>
+        <h3 className='icons__title_mobile'>THE MEANING OF OUR ICONS:</h3>
         <h3 className='icons__title'>THE MEANING OF OUR ICONS:</h3>
         <ul className='icons__wrapper'>
             <li data-aos='slide-right'>
@@ -21,7 +21,7 @@ const Icons = () => {
             <p className='icons__name'>Vegan</p>
         </li>
         </ul>
-    </div>
+    </section>
   )
 }
 

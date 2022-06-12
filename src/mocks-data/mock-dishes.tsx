@@ -1,5 +1,6 @@
 export const dishes = [
   {
+    id:12,
     image: 'https://i.ibb.co/0t8L634/rectangle-3x-1.png',
     name: 'Pad Ki Mao',
     description:
@@ -8,6 +9,7 @@ export const dishes = [
     price: 78,
   },
   {
+    id:13,
     image: 'https://i.ibb.co/jvQVdQL/rectangle-3x.png',
     name: 'Garbanzo Frito',
     description:
@@ -16,6 +18,7 @@ export const dishes = [
     price: 98,
   },
   {
+    id:14,
     image: 'https://i.ibb.co/6YZbmLF/rectangle-3x-2.png',
     name: 'Smoked Pizza',
     description: 'Basil dough, cashew "butter", demi-glace, bison & radish',
@@ -23,6 +26,7 @@ export const dishes = [
     price: 88,
   },
   {
+    id:15,
     image: 'https://i.ibb.co/0t8L634/rectangle-3x-1.png',
     name: 'Pad Ki Mao',
     description:
@@ -31,6 +35,7 @@ export const dishes = [
     price: 78,
   },
   {
+    id:16,
     image: 'https://i.ibb.co/jvQVdQL/rectangle-3x.png',
     name: 'Garbanzo Frito',
     description:
@@ -39,6 +44,7 @@ export const dishes = [
     price: 98,
   },
   {
+    id:17,
     image: 'https://i.ibb.co/6YZbmLF/rectangle-3x-2.png',
     name: 'Smoked Pizza',
     description: 'Basil dough, cashew "butter", demi-glace, bison & radish',
