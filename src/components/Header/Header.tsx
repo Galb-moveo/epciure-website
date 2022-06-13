@@ -7,7 +7,7 @@ import SearchModal from '../Modals/search/searchModal';
 import MenuModal from '../Modals/menu/MenuModal';
 const Header = (props: any) => {
   return (
-    <div className='header'>
+    <header className='header'>
       <div className='header__container'>
       <div className='header__mobile_wrapper'>
           <AiOutlineMenu className='header__nav_mobile' onClick={props.openMenu}/>
@@ -48,7 +48,7 @@ const Header = (props: any) => {
         {props.isOpenSearch && <SearchModal onClose={props.onClose}/>}
         {props.isOpenMenu && <MenuModal onClose={props.onClose}/>}
       </div>
-    </div>
+    </header>
     
   );
 };

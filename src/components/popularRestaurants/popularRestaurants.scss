@@ -1,12 +1,12 @@
 .restaurant__item {
-  width: 100%;
+  max-width: 100%;
   background-color: var(--card-b-color);
   list-style: none;
   cursor: pointer;
 }
 
 .restaurant__image {
-  width: 100%;
+  max-width: 100%;
   min-height: 150px;
 }
 .restaurant__wrapper {

@@ -28,11 +28,11 @@
 .header__mobile_wrapper {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 .header__logo_mobile {
   height: 32px;
   width: 32px;
-  margin-left: 80px;
 }
 
 .header__logo_desk {
@@ -46,6 +46,9 @@
 .header__icons_wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  flex-basis: 0;
+  flex: 1;
 }
 
 .header__icons {

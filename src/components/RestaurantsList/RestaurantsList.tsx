@@ -8,12 +8,12 @@ import { sliderSettings } from '../../constants/sliderSettings';
 
 const RestaurantsList = () => {
   return (
-    <div className='restaurant'>
+    <section className='restaurant'>
       <div className='restaurant__container' data-aos='zoom-in'>
       <h2 className='restaurant__title'>popular restaurant in epicure:</h2>
       <Slider {...sliderSettings}>
         {restaurant.map((item) => (
-          <PopularRestaurants item={item} key={item.name} />
+          <PopularRestaurants item={item} key={item.id}/>
         ))}
       </Slider>
       <div className='restaurant__button_wrap'>
@@ -22,7 +22,7 @@ const RestaurantsList = () => {
         </button>
       </div>
       </div>
-    </div>
+    </section>
   );
 };
 

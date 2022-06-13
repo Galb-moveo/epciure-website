@@ -4,7 +4,7 @@ import android from '../../assets/images/android.svg';
 
 const AboutUs = () => {
   return (
-    <div className='about'>
+    <section className='about'>
       <div className='about__container'>
         <div className='about__wrapper'>
           <div>
@@ -33,11 +33,11 @@ const AboutUs = () => {
           </div>
         </div>
         
-        <div>
+        <div data-aos="flip-right">
           <img className='about__logo' src={logo} alt='logo-about' />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

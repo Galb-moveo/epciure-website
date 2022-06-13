@@ -1,14 +1,9 @@
 import { useEffect, useState } from 'react';
-import AboutUs from '../AboutUs/AboutUs';
-import ChefList from '../ChefList/ChefList';
-import DishesList from '../DishesList/DishesList';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import Hero from '../Hero/Hero';
-import Icons from '../Icons/Icons';
-import RestaurantsList from '../RestaurantsList/RestaurantsList';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import HomePage from '../HomePage/HomePage';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -32,36 +27,27 @@ function App() {
     setIsMenuOpen(false);
   }
 
-  useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 400,
-      easing: 'ease-in-sine',
-      delay: 80,
-    });
-  }, []);
+  AOS.init({
+    offset: 200,
+    duration: 400,
+    easing: 'ease-in-sine',
+    delay: 80,
+  });
 
   return (
-    <>
-      <div className='app'>
-        <Header
-          openCart={handleOpenCart}
-          isOpen={isCartOpen}
-          openSearch={handleOpenSearch}
-          isOpenSearch={isSearchOpen}
-          openMenu={handleOpenMenu}
-          isOpenMenu={isMenuOpen}
-          onClose={handleClose}
-        />
-        <Hero />
-        <RestaurantsList />
-        <DishesList />
-        <Icons />
-        <ChefList />
-        <AboutUs />
-        <Footer />
-      </div>
-    </>
+    <div className='app'>
+      <Header
+        openCart={handleOpenCart}
+        isOpen={isCartOpen}
+        openSearch={handleOpenSearch}
+        isOpenSearch={isSearchOpen}
+        openMenu={handleOpenMenu}
+        isOpenMenu={isMenuOpen}
+        onClose={handleClose}
+      />
+      <HomePage />
+      <Footer />
+    </div>
   );
 }
 

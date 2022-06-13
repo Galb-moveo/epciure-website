@@ -13,14 +13,18 @@ const PopularRestaurants = (props: any) => {
   }
 
   return (
-    <li className='restaurant__item' key={props.key}>
+    <li className='restaurant__item'>
       <img className='restaurant__image' src={props.item.image} alt='img' />
       <div className='restaurant__wrapper'>
         <h3 className='restaurant__name'>{props.item.name}</h3>
         <p className='restaurant__chef'>{props.item.chef}</p>
         <div className='restaurant__starts'>
-          {filledStarsArray.map((fullStar) => fullStar)}
-          {emptyStarsArray.map((emptyStar) => emptyStar)}
+          {filledStarsArray.map((fullStar, index) => (
+            <div key={index}>{fullStar}</div>
+          ))}
+          {emptyStarsArray.map((emptyStar, index) => (
+            <div key={index}>{emptyStar}</div>
+          ))}
         </div>
       </div>
     </li>

@@ -5,7 +5,7 @@ import arrow from '../../assets/images/doubleArrow.svg';
 import { sliderSettings } from '../../constants/sliderSettings';
 const ChefOfWeek = (props: any) => {
   return (
-    <div className='chef'>
+    <section className='chef'>
       <h3 className='chef__title'>Chef of the week:</h3>
       <div className='chef__intro'>
         <div className='chef__image_wrap'>
@@ -14,11 +14,9 @@ const ChefOfWeek = (props: any) => {
             data-aos='flip-down'
             src={props.chef.image}
             alt='chef'
-            style={{ width: '478px' }}
           />
           <div className='hide'>{props.chef.name}</div>
         </div>
-
         <p className='chef__description'>{props.chef.description}</p>
       </div>
       <h4 className='chef__res'>{props.chef.title} Restaurants</h4>
@@ -42,7 +40,7 @@ const ChefOfWeek = (props: any) => {
           <img className='restaurant__button_arrow' src={arrow} alt='arrow' />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
