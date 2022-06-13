@@ -1,3 +1,4 @@
+@import '../../../globalStyle.scss';
 .modal__search {
   height: 367px;
   top: 0;
@@ -29,8 +30,9 @@
   left: 24px;
   background-color: transparent;
   border: none;
+  padding: 0;
 }
-@media screen and (min-width: 1024px) {
+@include desktop {
   .modal__search {
     display: none;
   }

@@ -1,3 +1,5 @@
+@import '../../globalStyle.scss';
+
 .dish__item {
   max-width: 245px;
   background-color: var(--card-b-color);
@@ -59,7 +61,7 @@
   letter-spacing: 1.97px;
 }
 
-@media screen and (min-width: 1024px) {
+@include desktop {
   .dish__item {
     max-width: 379px;
     height: 654px;

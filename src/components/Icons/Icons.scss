@@ -1,3 +1,5 @@
+@import '../../globalStyle.scss';
+
 .icons {
   display: flex;
   flex-direction: column;
@@ -36,7 +38,7 @@
 }
 
 
-@media screen and (min-width: 1024px) {
+@include desktop {
   .icons {
     height: 265px;
   }

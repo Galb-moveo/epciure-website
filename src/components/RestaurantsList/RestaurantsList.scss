@@ -1,8 +1,9 @@
+@import '../../globalStyle.scss';
 .restaurant {
   max-width: 100%;
   // margin: 0 0px 16px 0;
   margin-left: 16px;
-  overflow: hidden
+  margin-top: 80px;
 }
 .restaurant__container {
   // display: block;
@@ -18,7 +19,7 @@
   text-align: center;
   letter-spacing: var(--card-S-letter);
   text-transform: uppercase;
-  margin: 80px 8px 40px;
+  margin: 0 8px 40px;
 }
 .restaurant__button {
   border: none;
@@ -41,7 +42,7 @@
   width: 24px;
 }
 
-@media screen and (min-width: 1024px) {
+@include desktop {
   .restaurant__title {
     font-size: var(--card-title-S-size);
     line-height: 35px;

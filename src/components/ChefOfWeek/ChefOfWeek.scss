@@ -1,4 +1,5 @@
 @import '../../globalStyle.scss';
+
 .chef {
   margin: 0 0 16px;
   display: flex;
@@ -107,18 +108,7 @@
   padding: 0;
 }
 
-// @include tablet {
-//   .chef {
-//     margin: 0 80px;
-//   }
-// }
-
-// @media screen and (min-width: 580px) {
-//   .chef {
-//     margin: 0 80px;
-//   }
-// }
-@media screen and (min-width: 1024px) {
+@include desktop {
   .chef {
     margin: 0 126px;
   }
