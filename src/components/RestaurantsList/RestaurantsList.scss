@@ -1,9 +1,11 @@
 .restaurant {
-  margin: 0 0px 16px 0;
+  max-width: 100%;
+  // margin: 0 0px 16px 0;
   margin-left: 16px;
+  overflow: hidden
 }
 .restaurant__container {
-  display: block;
+  // display: block;
   margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;

@@ -59,6 +59,9 @@
   margin: 0px;
   padding: 0px;
 }
+.header__button{
+  padding: 0;
+}
 
 .header__button_cart {
   @extend %header-button-mobile;

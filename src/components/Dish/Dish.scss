@@ -1,5 +1,5 @@
 .dish__item {
-  max-width: 100%;
+  max-width: 245px;
   background-color: var(--card-b-color);
   list-style: none;
   cursor: pointer;
@@ -11,7 +11,7 @@
 }
 
 .dish__image {
-  max-width: 100%;
+  width: 100%;
   min-height: 150px;
 }
 
@@ -28,14 +28,14 @@
   align-items: flex-start;
   font-size: var(--card-title-B-size=18px);
   letter-spacing: var(--card-B-letter);
-  margin: 24px 16px 8px;
+  // margin: 24px 16px 8px;
 }
 .dish__description {
   font-size: 16px;
   line-height: 20px;
   text-align: left;
   letter-spacing: 1.97px;
-  margin: 0 16px 20px;
+  // margin: 0 16px 20px;
   text-overflow: ellipsis;
   width: 210px;
 }
@@ -61,7 +61,7 @@
 
 @media screen and (min-width: 1024px) {
   .dish__item {
-    width: 379px;
+    max-width: 379px;
     height: 654px;
   }
 
@@ -104,3 +104,63 @@
     line-height: 30px;
   }
 }
+// .dish__item {
+//   width: 100%;
+//   background-color: var(--card-b-color);
+//   list-style: none;
+//   cursor: pointer;
+//   position: relative;
+// }
+
+// .dish__hr {
+//   display: none;
+// }
+
+// .dish__image {
+//   width: 100%;
+//   min-height: 150px;
+// }
+
+// .dish__wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   margin: 0px 16px 0px;
+//   height: 260px;
+// }
+
+// .dish__name {
+//   font-weight: 400;
+//   align-items: flex-start;
+//   font-size: var(--card-title-B-size=18px);
+//   letter-spacing: var(--card-B-letter);
+//   margin: 24px 16px 8px;
+// }
+// .dish__description {
+//   font-size: 16px;
+//   line-height: 20px;
+//   text-align: left;
+//   letter-spacing: 1.97px;
+//   margin: 0 16px 20px;
+//   text-overflow: ellipsis;
+//   width: 210px;
+// }
+
+// .dish__price_wrap {
+//   position: absolute;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 8px;
+//   bottom: 0px;
+//   left: 24px;
+// }
+
+// .dish__type {
+//   font-size: 16px;
+//   line-height: 30px;
+//   font-weight: 400;
+//   text-align: center;
+//   letter-spacing: 1.97px;
+// }

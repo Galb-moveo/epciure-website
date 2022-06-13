@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import AOS from 'aos';
@@ -15,7 +15,6 @@ function App() {
   }
   function handleOpenSearch() {
     setIsSearchOpen(!isSearchOpen);
-    console.log('test');
   }
   function handleOpenMenu() {
     setIsMenuOpen(!isMenuOpen);
