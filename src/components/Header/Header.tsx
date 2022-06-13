@@ -27,17 +27,17 @@ const Header = (props: any) => {
         <div className='header__icons_wrapper'>
           <ul className='header__icons'>
             <li>
-              <button className='header__button_search' type='button' onClick={props.openSearch}></button>
+              <button className='header__button header__button_search' type='button' onClick={props.openSearch}></button>
             </li>
             <li>
               <button
-                className='header__button_personal'
+                className='header__button header__button_personal'
                 type='button'
               ></button>
             </li>
             <li>
               <button
-                className='header__button_cart'
+                className='header__button header__button_cart'
                 type='button'
                 onClick={props.openCart}
               ></button>

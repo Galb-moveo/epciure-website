@@ -8,7 +8,7 @@ import { dishes } from '../../mocks-data/mock-dishes';
 
 const DishesList = () => {
   return (
-    <section className='restaurant' data-aos='zoom-out'>
+    <section className='restaurant restaurant__dish' data-aos='zoom-out'>
       <div className='restaurant__container'>
       <h2 className='restaurant__title'>SIGNATURE DISH OF:</h2>
       <Slider {...sliderSettings}>
