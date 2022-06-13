@@ -73,11 +73,10 @@
 }
 .chef__res-item {
   max-width: 245px;
-  // height: 357px;
   background-color: var(--card-b-color);
   text-align: left;
   margin-left: 16px;
-
+  cursor: pointer;
 }
 
 .chef__res-name {
@@ -90,11 +89,7 @@
 }
 
 .chef__res-image {
-  width: 100%;
-  height: 250px;
-}
-.chef__res_name_wrap {
-  height: 100px;
+  min-width: 262px;
 }
 
 .about__links {
@@ -102,7 +97,7 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.chef__list_ul{
+.chef__list_ul {
   display: flex;
   justify-content: center;
   padding: 0;
