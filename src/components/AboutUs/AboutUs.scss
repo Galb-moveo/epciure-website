@@ -1,12 +1,11 @@
+@import '../../globalStyle.scss';
 .about {
   background-color: #fafafa;
-  // height: 529px;
-  // max-width: 40px 0;
   display: flex;
   justify-content: center;
 }
 .about__container {
-  margin: 48px 20px;
+  margin: 24px 20px;
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
@@ -19,7 +18,7 @@
 .about__logo {
   height: 102px;
   width: 95px;
-  margin: 32px 0 24px;
+  margin: 0px 0 24px;
 }
 .about__wrapper {
   display: flex;
@@ -29,7 +28,6 @@
   border: none;
   background-color: transparent;
   padding-left: 5px;
-  
 }
 .about__title {
   font-weight: var(--card-f-S-weight);
@@ -46,13 +44,8 @@
   text-overflow: ellipsis;
   margin: 16px 0px 40px;
 }
-@media screen and (min-width: 580px) {
-  .about__container {
-    margin: 40px 80px;
-  }
-}
 
-@media screen and (min-width: 1024px) {
+@include desktop {
   .about {
     background-color: #fafafa;
     height: 529px;
@@ -69,7 +62,7 @@
     align-items: center;
     position: relative;
   }
-  .about__links{
+  .about__links {
     flex-direction: row;
   }
 

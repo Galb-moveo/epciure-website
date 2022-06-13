@@ -9,8 +9,8 @@
   --card-S-letter: 1.25px;
 }
 
-@mixin tablet {
-  @media screen and (min-width: 580px) {
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
     @content;
   }
 }

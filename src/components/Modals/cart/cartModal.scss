@@ -1,3 +1,4 @@
+@import '../../../globalStyle.scss';
 .modal{
   display: flex;
   justify-content: center;
@@ -24,7 +25,7 @@
   display: none;
 }
 
-@media screen and(min-width:1024px) {
+@include desktop {
   .modal{
     width: 497px;
     height: 586px;

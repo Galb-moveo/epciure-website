@@ -1,3 +1,4 @@
+@import '../../../globalStyle.scss';
 .modal__menu {
   height: 405px;
   top: 0;
@@ -21,12 +22,13 @@
   letter-spacing: 1.92px;
   text-decoration: none;
   color: #000000;
+  cursor: pointer;
 }
 .footer__nav_modal {
   margin-left: 20px;
 }
 
-@media screen and (min-width: 1024px) {
+@include desktop {
   .modal__menu {
     display: none;
   }

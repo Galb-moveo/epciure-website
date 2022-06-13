@@ -1,3 +1,5 @@
+@import '../../globalStyle.scss';
+
 %header-button-mobile {
   background-size: 100%;
   background-repeat: no-repeat;
@@ -59,7 +61,7 @@
   margin: 0px;
   padding: 0px;
 }
-.header__button{
+.header__button {
   padding: 0;
 }
 
@@ -77,7 +79,7 @@
   background-image: url('../../assets/images/search.svg');
 }
 
-@media screen and (min-width: 1024px) {
+@include desktop {
   %header-button {
     background-size: 100%;
     background-repeat: no-repeat;
