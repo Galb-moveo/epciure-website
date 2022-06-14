@@ -17,7 +17,7 @@ const MenuModal = (props:any) => {
               Chefs
             </NavLink>
           </nav>
-          <hr style={{width:'100%'}}/>
+          <hr style={{width:'100%', opacity: '0.3'}}/>
           <div>
           <nav className="footer__nav footer__nav_modal">
             <li><Link className="footer__link" to='/'>Contact Us</Link></li>
