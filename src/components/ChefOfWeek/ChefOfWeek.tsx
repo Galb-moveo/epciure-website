@@ -34,7 +34,7 @@ const ChefOfWeek = (props: any) => {
           ))}
         </Slider>
       </div>
-      <div className='restaurant__button_wrap'>
+      <div className='restaurant__button_wrap' style={{marginLeft:'16px'}}>
         <button className='restaurant__button'>
           All restaurants{' '}
           <img className='restaurant__button_arrow' src={arrow} alt='arrow' />

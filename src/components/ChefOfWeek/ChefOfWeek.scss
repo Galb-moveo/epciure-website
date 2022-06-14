@@ -72,11 +72,11 @@
   margin-left: 16px;
 }
 .chef__res-item {
-  max-width: 245px;
   background-color: var(--card-b-color);
   text-align: left;
   margin-left: 16px;
   cursor: pointer;
+  max-width: 100%;
 }
 
 .chef__res-name {
@@ -84,12 +84,18 @@
   font-size: var(--card-title-S-size);
   line-height: 47px;
   letter-spacing: var(--card-B-letter);
-  margin: 16px 16px 0px;
+  margin: 16px 0;
+  margin-left: 10px;
   padding-bottom: 44px;
+  text-overflow: ellipsis;
 }
 
 .chef__res-image {
-  min-width: 262px;
+  height: 250px;
+}
+
+.chef__res_name_wrap {
+  overflow: hidden;
 }
 
 .about__links {
@@ -116,6 +122,7 @@
   .chef__intro {
     flex-direction: row;
     justify-content: space-between;
+    margin: 0;
     gap: 63px;
   }
 
@@ -142,7 +149,7 @@
   .chef__res {
     font-size: var(--card-title-S-size);
     text-transform: capitalize;
-    margin: 40px 0 45px;
+    margin: 40px 20px 45px;
   }
 
   .chef__res-item {
