@@ -4,25 +4,29 @@ import Slider from 'react-slick';
 import arrow from '../../assets/images/doubleArrow.svg';
 import { sliderSettings } from '../../constants/sliderSettings';
 const ChefOfWeek = (props: any) => {
+  
+  const chef = props.Chef.Chef;
+  const restById = props.restsById;
+  console.log(restById, 'chef')
   return (
     <section className='chef'>
-      <h3 className='chef__title'>Chef of the week:</h3>
+       <h3 className='chef__title'>Chef of the week:</h3>
       <div className='chef__intro'>
         <div className='chef__image_wrap'>
           <img
             className='chef__image'
             data-aos='flip-down'
-            src={props.chef.image}
+            src={chef.image}
             alt='chef'
           />
-          <div className='hide'>{props.chef.name}</div>
+          <div className='hide'>{chef.name}</div>
         </div>
-        <p className='chef__description'>{props.chef.description}</p>
+        <p className='chef__description'>{chef.description}</p>
       </div>
-      <h4 className='chef__res'>{props.chef.title} Restaurants</h4>
-      <div data-aos='fade-down-right'>
+      <h4 className='chef__res'>{chef.name} Restaurants</h4>
+      <div className='chef__restaurant_list' data-aos='fade-down-right'>
         <Slider {...sliderSettings}>
-          {props.chef.restaurants.map((res: any) => (
+          {restById.map((res: any) => (
             <li key={res.name}>
               <div className='chef__res-item'>
                 <img className='chef__res-image' src={res.image} alt='dish' />
@@ -39,7 +43,7 @@ const ChefOfWeek = (props: any) => {
           All restaurants{' '}
           <img className='restaurant__button_arrow' src={arrow} alt='arrow' />
         </button>
-      </div>
+      </div> 
     </section>
   );
 };
