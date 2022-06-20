@@ -5,14 +5,14 @@ import Hero from '../Hero/Hero';
 import Icons from '../Icons/Icons';
 import RestaurantsList from '../RestaurantsList/RestaurantsList';
 
-const HomePage = () => {
+const HomePage = (props: any) => {
   return (
     <section className='homePage'>
       <Hero />
-      <RestaurantsList />
-      <DishesList />
+      <RestaurantsList restaurants={props.restaurants} />
+      <DishesList dishes={props.dishes} restaurants={props.restaurants}/>
       <Icons />
-      <ChefList />
+      <ChefList restsById={props.restsById} chefOfWeek={props.chefOfWeek} />
       <AboutUs />
     </section>
   );

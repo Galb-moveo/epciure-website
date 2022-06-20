@@ -1,6 +1,12 @@
+@import '../globalStyle.scss';
 .slick-slider .slick-slide {
   padding: 0 24px;
   overflow: hidden;
   padding-left: 0;
 }
 
+@include desktop {
+  .slick-list{
+    margin: 0 126px;
+}
+  }
