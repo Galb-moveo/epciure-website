@@ -5,8 +5,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import HomePage from '../HomePage/HomePage';
 import Api from '../../utils/Api';
-import { chefs } from '../../mocks-data/mock-chefs';
-import ChefList from '../ChefList/ChefList';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -17,8 +15,9 @@ function App() {
   const [isChefs, setIsChefs] = useState([]);
   const [isChefOfWeek, setIsChefOfWeek] = useState([]);
   const [isRestByChef, setIsRestByChef] = useState([]);
+  const [isKeyword, setKeyword] = useState({ keyword: '' });
+  const [isSearchData, setIsSearchData] = useState([{Chefs:[]},{Dishes:[]},{Restaurants:[]}])
 
-  console.log(isRestByChef)
   useEffect(() => {
     Api.getAllInfo().then(([rests, chefs, dishes, chefOfWeek]) => {
       setIsRestaurants(rests);
@@ -27,15 +26,30 @@ function App() {
       setIsChefOfWeek(chefOfWeek);
     });
   }, []);
-
   useEffect(() => {
-    const chefId = isChefOfWeek.map((chef: any) => 
-     chef._id 
-    )
+    const chefId = isChefOfWeek.map((chef: any) => chef._id);
     Api.getRestaurantsByChef(chefId).then((restById) => {
       setIsRestByChef(restById);
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if(isKeyword.keyword === ''){
+      return;
+    }else{
+    Api.getSearchResults(isKeyword.keyword).then((data) => {
+      setIsSearchData(data)
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+  }, [isKeyword.keyword]);
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setKeyword({ ...isKeyword, [name]: value });
+  };
 
   function handleOpenCart() {
     setIsCartOpen(!isCartOpen);
@@ -77,6 +91,9 @@ function App() {
         isChefs={isChefs}
         chefOfWeek={isChefOfWeek}
         restsById={isRestByChef}
+        handleChange={handleChange}
+        isSearchData={isSearchData}
+        isKeyword={isKeyword}
       />
       <Footer />
     </div>
