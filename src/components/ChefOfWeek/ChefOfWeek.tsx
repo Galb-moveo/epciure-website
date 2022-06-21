@@ -4,13 +4,12 @@ import Slider from 'react-slick';
 import arrow from '../../assets/images/doubleArrow.svg';
 import { sliderSettings } from '../../constants/sliderSettings';
 const ChefOfWeek = (props: any) => {
-  
   const chef = props.Chef.Chef;
   const restById = props.restsById;
-  console.log(restById, 'chef')
+  
   return (
     <section className='chef'>
-       <h3 className='chef__title'>Chef of the week:</h3>
+      <h3 className='chef__title'>Chef of the week:</h3>
       <div className='chef__intro'>
         <div className='chef__image_wrap'>
           <img
@@ -37,13 +36,14 @@ const ChefOfWeek = (props: any) => {
             </li>
           ))}
         </Slider>
-      </div>
-      <div className='restaurant__button_wrap' style={{marginLeft:'16px'}}>
+        <div className='restaurant__button_wrap' style={{ marginLeft: '16px' }}>
         <button className='restaurant__button'>
           All restaurants{' '}
           <img className='restaurant__button_arrow' src={arrow} alt='arrow' />
         </button>
-      </div> 
+      </div>
+      </div>
+
     </section>
   );
 };

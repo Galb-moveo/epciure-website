@@ -38,7 +38,7 @@ class Api {
     return customFetch(`${this.baseUrl}/chefOfWeek`);
   }
 
-  getSearchResults(keyword){
+  getSearchResults(keyword) {
     return customFetch(`${this.baseUrl}/search/${keyword}`);
   }
 }
