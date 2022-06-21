@@ -21,7 +21,7 @@ const Hero = (props: any) => {
                 if (data.Chefs) {
                   return data.Chefs.map((chef: any, i: number) => (
                     <a className='hero__autoComplete_item' href='/' key={i}>
-                      Chef: {chef.name}{' '}
+                      Chef: {chef.name}
                     </a>
                   ));
                 }
