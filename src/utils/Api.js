@@ -9,37 +9,67 @@ class Api {
     this.headers = headers;
   }
 
-  getAllInfo() {
+  getAllInfo(token) {
     return Promise.all([
-      this.getRestaurants(),
-      this.getChefs(),
-      this.getDishes(),
-      this.getChefOfWeek(),
+      this.getRestaurants(token),
+      this.getChefs(token),
+      this.getDishes(token),
+      this.getChefOfWeek(token),
     ]);
   }
 
-  getRestaurants() {
-    return customFetch(`${this.baseUrl}/restaurants`);
+  getRestaurants(token) {
+    return customFetch(`${this.baseUrl}/restaurants`,{
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
   }
 
-  getRestaurantsByChef(chefId) {
-    return customFetch(`${this.baseUrl}/restaurants/${chefId}`);
+  getRestaurantsByChef(chefId,token) {
+    return customFetch(`${this.baseUrl}/restaurants/${chefId}`,{
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
   }
 
-  getChefs() {
-    return customFetch(`${this.baseUrl}/chefs`);
+  getChefs(token) {
+    return customFetch(`${this.baseUrl}/chefs`,{
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
   }
 
-  getDishes() {
-    return customFetch(`${this.baseUrl}/dishes`);
+  getDishes(token) {
+    return customFetch(`${this.baseUrl}/dishes`,{
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
   }
 
-  getChefOfWeek() {
-    return customFetch(`${this.baseUrl}/chefOfWeek`);
+  getChefOfWeek(token) {
+    return customFetch(`${this.baseUrl}/chefOfWeek`,{
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
   }
 
   getSearchResults(keyword) {
-    return customFetch(`${this.baseUrl}/search/${keyword}`);
+    return customFetch(`${this.baseUrl}/search/${keyword}`,{
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
   }
 }
 

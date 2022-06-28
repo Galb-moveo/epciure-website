@@ -16,13 +16,17 @@ const Dish = (props: any) => {
               {props.dish.price}
             </p>
           ) : (
-            <img
-              className='dish__type'
-              src={signatureDish.tags}
-              alt='type'
-              style={{ width: '35px' }}
-            />
+            signatureDish.tags.map((tag: any,index:any) => (
+              <img
+              key={index}
+                className='dish__type'
+                src={tag}
+                alt='type'
+                style={{ width: '35px' }}
+              />
+            ))
           )}
+
           <p className='dish__type_mobile'>
             <TbCurrencyShekel style={{ verticalAlign: 'middle' }} />
             {signatureDish.price}
