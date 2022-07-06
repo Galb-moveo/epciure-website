@@ -75,7 +75,7 @@
   background-color: var(--card-b-color);
   text-align: left;
   margin-left: 16px;
-  cursor: pointer;
+  // cursor: pointer;
   max-width: 100%;
 }
 
@@ -91,7 +91,8 @@
 }
 
 .chef__res-image {
-  height: 250px;
+  height: 150px;
+  width: 245px;
 }
 
 .chef__res_name_wrap {
@@ -128,7 +129,7 @@
 
   .chef__image {
     position: relative;
-    width: 100%;
+    width: 400px;
     height: 372px;
   }
 
@@ -175,7 +176,6 @@
   }
 
   .chef__image_wrap {
-
     margin: 0 ;
   }
 }

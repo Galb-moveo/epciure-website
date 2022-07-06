@@ -20,7 +20,9 @@
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 1.92px;
-  color: #000000;
+  // color: #000000;
+background-color: transparent;
+border: none;  // opacity: 0.4;
 }
 
 @include desktop {

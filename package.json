@@ -1,7 +1,6 @@
 {
   "name": "epicure-website",
   "version": "0.1.0",
-  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -25,7 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "gh-pages -d build",
+    "deploy": "scp -r -i epicure-gal.pem ./build/* ubuntu@3.82.121.223:/home/ubuntu/front/build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,7 +50,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
-    "@types/react-slick": "^0.23.8",
-    "gh-pages": "^4.0.0"
-  }
+    "@types/react-slick": "^0.23.8"
+  },
+  "homepage": "."
 }

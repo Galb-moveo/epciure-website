@@ -3,11 +3,11 @@
   max-width: 100%;
   background-color: var(--card-b-color);
   list-style: none;
-  cursor: pointer;
 }
 
 .restaurant__image {
   max-width: 245px;
+  min-height: 153px;
 }
 .restaurant__wrapper {
   display: flex;

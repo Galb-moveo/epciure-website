@@ -10,24 +10,31 @@ const Header = (props: any) => {
     <header className='header'>
       <div className='header__container'>
       <div className='header__mobile_wrapper'>
-          <AiOutlineMenu className='header__nav_mobile' onClick={props.openMenu}/>
+          <AiOutlineMenu style={{'opacity':'0.4'}} className='header__nav_mobile' 
+          // onClick={props.openMenu}
+          />
           </div>
         <div className='header__wrapper'>
           <img className='header__logo_desk' src={logo} alt='desk-logo' />
           <img className='header__logo_mobile' src={mobileLogo} alt='mobile-logo' />
           <nav className='header__nav'>
-            <NavLink className='header__nav-item' to='/'>
-              Restaurants
-            </NavLink>
-            <NavLink className='header__nav-item' to='/'>
+            <button className='header__nav-item' disabled>
+             (coming soon) Restaurants
+            </button>
+            <button className='header__nav-item' disabled>
               Chefs
-            </NavLink>
+            </button>
           </nav>
         </div>
         <div className='header__icons_wrapper'>
           <ul className='header__icons'>
             <li>
-              <button className='header__button header__button_search' type='button' onClick={props.openSearch}></button>
+              <button className='header__button header__button_search' type='button' 
+              // onClick={props.openSearch}
+              disabled
+              >
+                
+              </button>
             </li>
             <li>
               <button

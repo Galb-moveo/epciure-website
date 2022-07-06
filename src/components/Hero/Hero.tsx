@@ -6,14 +6,15 @@ const Hero = (props: any) => {
         <h3 className='hero__title'>
           Epicure works with the top chef restaurants in Tel Aviv
         </h3>
-        <div className='hero__search_wrapper rotate-center'>
-          <button type='submit' className='hero__button'></button>
+        <button className='hero__search_wrapper rotate-center' disabled>
+          <button type='submit' className='hero__button' disabled></button>
           <input
             onChange={props.handleChange}
             className='hero__input'
             type='search'
             name='keyword'
-            placeholder='Search for restaurant cuisine, chef'
+            placeholder='coming soon...'
+            disabled
           />
           <div className='hero__autoComplete'>
             {props.isKeyword.keyword !== '' &&
@@ -44,7 +45,7 @@ const Hero = (props: any) => {
                 }
               })}
           </div>
-        </div>
+        </button>
       </form>
     </section>
   );

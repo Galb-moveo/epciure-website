@@ -73,6 +73,8 @@
 .header__button_personal {
   @extend %header-button-mobile;
   background-image: url('../../assets/images/personal.svg');
+  opacity: 0.4;
+  cursor: default;
 }
 .header__button_search {
   @extend %header-button-mobile;
@@ -122,8 +124,10 @@
     font-weight: var(--card-f-S-weight);
     font-size: 18px;
     line-height: 22px;
-    color: black;
+    // color: black;
     letter-spacing: 1.92px;
+    background-color: transparent;
+    border: none;
   }
 
   .header__icons {
@@ -136,9 +140,13 @@
 
   .header__button_personal {
     @extend %header-button;
+    opacity: 0.4;
+    cursor:default;
   }
   .header__button_search {
     @extend %header-button;
+    opacity: 0.4;
+    cursor: default;
   }
 
   .header__mobile_wrapper {

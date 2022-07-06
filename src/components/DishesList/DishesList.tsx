@@ -11,14 +11,14 @@ const DishesList = (props:any) => {
       <div className='restaurant__container'>
       <h2 className='restaurant__title'>SIGNATURE DISH OF:</h2>
       <Slider {...sliderSettings}>
-        {props.restaurants.map((restaurant:any) => (
-          <Dish restaurant={restaurant} key={restaurant._id} />
+        {props.dishes.map((dish:any) => (
+          <Dish dish={dish} key={dish._id} />
         ))}
       </Slider>
       <div className='restaurant__button_wrap'>
-        <button className='restaurant__button'>
-          All restaurants
-          <img className='restaurant__button_arrow' src={arrow} alt='arrow' />
+        <button className='restaurant__button' disabled>
+        (coming soon) All restaurants
+          {/* <img className='restaurant__button_arrow' src={arrow} alt='arrow' /> */}
         </button>
       </div>
       </div>

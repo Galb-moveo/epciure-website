@@ -16,7 +16,11 @@ function App() {
   const [isChefOfWeek, setIsChefOfWeek] = useState([]);
   const [isRestByChef, setIsRestByChef] = useState([]);
   const [isKeyword, setKeyword] = useState({ keyword: '' });
-  const [isSearchData, setIsSearchData] = useState([{Chefs:[]},{Dishes:[]},{Restaurants:[]}])
+  const [isSearchData, setIsSearchData] = useState([
+    { Chefs: [] },
+    { Dishes: [] },
+    { Restaurants: [] },
+  ]);
 
   useEffect(() => {
     Api.getAllInfo().then(([rests, chefs, dishes, chefOfWeek]) => {
@@ -26,24 +30,35 @@ function App() {
       setIsChefOfWeek(chefOfWeek);
     });
   }, []);
-  useEffect(() => {
-    const chefId = isChefOfWeek.map((chef: any) => chef._id);
-    Api.getRestaurantsByChef(chefId).then((restById) => {
-      setIsRestByChef(restById);
-    });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   useEffect(() => {
-    if(isKeyword.keyword === ''){
+    let id = '';
+    // eslint-disable-next-line array-callback-return
+    isChefOfWeek.map((chef: any) => {
+      // eslint-disable-next-line array-callback-return
+      isChefs.map((chefItem: any) => {
+        if (chef.Chef.name === chefItem.name) {
+          id = chefItem._id;
+        }
+      });
+      Api.getRestaurantsByChef(id).then((restById) => {
+        setIsRestByChef(restById);
+      });
+    });
+  }, [isChefOfWeek, isChefs]);
+
+  useEffect(() => {
+    if (isKeyword.keyword === '') {
       return;
-    }else{
-    Api.getSearchResults(isKeyword.keyword).then((data) => {
-      setIsSearchData(data)
-    }).catch((err) => {
-      console.log(err);
-    })
-  }
+    } else {
+      Api.getSearchResults(isKeyword.keyword)
+        .then((data) => {
+          setIsSearchData(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   }, [isKeyword.keyword]);
 
   const handleChange = (e: any) => {
@@ -69,7 +84,7 @@ function App() {
 
   AOS.init({
     offset: 200,
-    duration: 400,
+    duration: 300,
     easing: 'ease-in-sine',
     delay: 80,
   });
