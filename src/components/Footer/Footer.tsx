@@ -3,9 +3,9 @@ const Footer = () => {
   return (
     <footer className="footer">
         <nav className="footer__nav">
-            <li><Link className="footer__link" to='/'>Contact Us</Link></li>
-            <li><Link className="footer__link" to='/'>Term of Use</Link></li>
-            <li><Link className="footer__link" to='/'>Privacy Policy</Link></li>
+            <li><button className="footer__link" disabled>Contact Us</button></li>
+            <li><button className="footer__link" disabled>Term of Use</button></li>
+            <li><button className="footer__link" disabled>Privacy Policy</button></li>
         </nav>
     </footer>
   )

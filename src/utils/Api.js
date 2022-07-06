@@ -27,13 +27,8 @@ class Api {
     });
   }
 
-  getRestaurantsByChef(chefId,token) {
-    return customFetch(`${this.baseUrl}/restaurants/${chefId}`,{
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    });
+  getRestaurantsByChef(chefId) {
+    return customFetch(`${this.baseUrl}/restaurants/${chefId}`);
   }
 
   getChefs(token) {
